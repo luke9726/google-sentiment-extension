@@ -15,6 +15,9 @@ from textblob import TextBlob
 from textblob import Word
 from nltk.corpus import stopwords
 
+# Path declaration
+curpath = os.path.abspath(os.curdir)
+
 # Function declarations
 
 # Performs sentiment analysis using TextBlob, prints results
@@ -55,9 +58,6 @@ def sentiment_analysis(input_links):
     df1['subjectivity'] = df1['lemmatized'].apply(lambda x: TextBlob(x).sentiment.subjectivity)
     
     return df1
-    
-# Path declaration
-curpath = os.path.abspath(os.curdir)
     
 
 
