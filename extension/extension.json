@@ -1,0 +1,17 @@
+{
+    "name": "google sentiment",
+    "version": "1.0",
+    "manifest_version": 2,
+    "permissions": [
+        "activeTab"
+      ],
+    "content_script": [
+        {
+            "matches": ["google.com"],
+            "js": ["sentiment.js"]
+        }
+    ],
+    "browser_action": {
+        "default_title": "Calculate sentiment"
+    }
+}
